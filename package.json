@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "A simple mock backend for building prototypes",
   "main": "index.js",
+  "bin": {
+    "clay": "./cli.js"
+  },
   "scripts": {
     "test": "node test"
   },
@@ -28,7 +31,12 @@
     "bignumber.js": "^7.2.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "getopts": "^2.2.1",
     "jsonwebtoken": "^8.3.0",
+    "mkdirp": "^0.5.1",
     "uuid": "^3.3.2"
+  },
+  "config": {
+    "@yesiree/clay": {}
   }
 }
