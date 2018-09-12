@@ -22,7 +22,7 @@ if (opts.init) {
   // run clay
   const server = require('./lib/server.js')
   const config = getConfig()
-  console.dir(config)
+  server.start()
 }
 
 
