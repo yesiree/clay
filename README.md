@@ -1,3 +1,5 @@
+> NOTE: This is a work-in-progress.
+
 # clay
 A simple mock backend for building prototypes
 
