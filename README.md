@@ -16,11 +16,13 @@ The idea behind this is to provide a simple and powerful backend that just does 
 
 # API
 
-## GET /ping
+## Auth APIs
+
+### GET /ping
 
 > Retrieves a simple response from the server to ensure it's running properly.
 
-### Response
+#### Response
 ```json
 {
   "message": String,
@@ -28,11 +30,11 @@ The idea behind this is to provide a simple and powerful backend that just does 
 }
 ```
 
-## POST /auth/login
+### POST /auth/login
 
 > Authenticates a user and returns a JWT.
 
-### Request
+#### Request
 ```json
 {
   "username": String,
@@ -40,18 +42,18 @@ The idea behind this is to provide a simple and powerful backend that just does 
 }
 ```
 
-### Response
+#### Response
 ```json
 {
   "authToken": JWT
 }
 ```
 
-## GET /auth/refresh
+### GET /auth/refresh
 
 > Gets a refreshed token
 
-### Response
+#### Response
 
 ```json
 {
@@ -59,11 +61,11 @@ The idea behind this is to provide a simple and powerful backend that just does 
 }
 ```
 
-## GET /auth/users
+### GET /auth/users
 
 > Retrieves a list of users from the authentication store
 
-### Response
+#### Response
 
 ```json
 [
@@ -75,11 +77,11 @@ The idea behind this is to provide a simple and powerful backend that just does 
 ]
 ```
 
-## GET /auth/users/:pid
+### GET /auth/users/:pid
 
 > Retrieves a single user by PID
 
-### Response
+#### Response
 
 ```json
 {
@@ -89,11 +91,11 @@ The idea behind this is to provide a simple and powerful backend that just does 
 }
 ```
 
-## POST /auth/users
+### POST /auth/users
 
 > Creates a new user with a newly generated PID. If either a "$pid" or "$password" property is supplied, it will be overwritten. The "username", "role", "$pass1", and "$pass2" properties are required. In addition, "$pass1" and "$pass2" must match exactly. The username must be unique. Additional properties may also be provided.
 
-### Request
+#### Request
 
 ```json
 {
@@ -104,11 +106,11 @@ The idea behind this is to provide a simple and powerful backend that just does 
 }
 ```
 
-## PATCH /auth/users/:pid
+### PATCH /auth/users/:pid
 
 > Patches an existing user. If the supplied PID matches the user with 'username' equal to 'admin', then the 'username' and 'role' properties must be 'admin'. If a '$password' property is supplied, it will be deleted. The '$password' field cannot be modified directly. You must supply the '$pass1' and '$pass2' fields and they must match each other. The 'username' property must be unique. The '$pid', if supplied, will be overwritten by the PID in the URL. Additional properties may be supplied.
 
-### Request
+#### Request
 
 ```json
 {
@@ -116,35 +118,35 @@ The idea behind this is to provide a simple and powerful backend that just does 
 }
 ```
 
-## DELETE /auth/users/:pid
+### DELETE /auth/users/:pid
 
 > Deletes the user specified by the PID in the URL
 
-## GET /auth/roles
+### GET /auth/roles
 
 > Retrieves the list of available roles
 
-### Response
+#### Response
 
 ```json
 [ String ]
 ```
 
-## PUT /auth/roles
+### PUT /auth/roles
 
 > Sets the list of available roles
 
-### Request
+#### Request
 
 ```json
 [ String ]
 ```
 
-## GET /auth/rules
+### GET /auth/rules
 
 > Retrieves the authorization rules
 
-### Response
+#### Response
 
 ```json
 {
@@ -152,14 +154,40 @@ The idea behind this is to provide a simple and powerful backend that just does 
 }
 ```
 
-## PUT /auth/rules
+### PUT /auth/rules
 
 > Sets the authorization rules
 
-### Request
+#### Request
 
 ```json
 {
   // TODO
 }
 ```
+
+## Resource APIs
+
+> A brief description of how the Resource APIs work
+
+### Collections
+
+### Resources
+
+### PIDs
+
+### GET /api/**/:collection[#,#]
+
+### POST /api/**/:collection
+
+### PUT /api/**/:collection
+
+### DELETE /api/**/:collection
+
+### GET /api/**/:resource
+
+### PUT /api/**/:resource
+
+### PATCH /api/**/:resource
+
+### DELETE /api/**/:resource
