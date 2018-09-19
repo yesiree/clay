@@ -154,7 +154,7 @@ The idea behind this is to provide a simple and powerful backend that just does 
 
 ## PUT /auth/rules
 
-> Sets teh authorization rules
+> Sets the authorization rules
 
 ### Request
 
