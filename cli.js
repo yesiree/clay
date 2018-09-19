@@ -14,10 +14,6 @@ if (opts.init) {
   // create and save config object
   console.log(`\nInitializing clay instance, please answer the following questions...\n`)
   ask([{
-      label: `  Root path? (${process.cwd()}) `,
-      key: 'root',
-      fallback: process.cwd()
-    },{
       label: '  Storage path relative to root? (.clay) ',
       key: 'storagePath',
       fallback: '.clay'
