@@ -1,3 +1,7 @@
+.clay/
+/dist/
+/dist.next/
+
 # Logs
 logs
 *.log

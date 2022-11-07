@@ -31,13 +31,21 @@
     "bignumber.js": "^7.2.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "fuse.js": "^6.4.6",
     "getopts": "^2.2.1",
-    "jsonwebtoken": "^8.3.0",
-    "mkdirp": "^1.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "mkdirp": "^1.0.4",
     "rimraf": "^2.6.2",
-    "uuid": "^3.3.2"
+    "sqlite3": "^4.2.0",
+    "uuid": "^3.4.0"
   },
   "config": {
     "@yesiree/clay": {}
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.5",
+    "@types/mkdirp": "^1.0.2",
+    "@types/node": "^16.7.4",
+    "@types/uuid": "^8.3.1"
   }
 }
