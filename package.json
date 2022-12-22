@@ -32,7 +32,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "getopts": "^2.2.1",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "mkdirp": "^1.0.3",
     "rimraf": "^2.6.2",
     "uuid": "^3.3.2"
